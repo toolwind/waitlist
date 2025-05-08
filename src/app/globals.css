@@ -4,13 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant autofill (&:auto-fill,&:-webkit-autofill);
 
-@utility autofill-bg-* {
-  &:auto-fill, &:autofill, &:-webkit-autofill {
-    --autofill-bg-color: --value(--color-*);
-    --autofill-bg-color: --value([*]);
-    background-color: var(--autofill-bg-color) !important;
-    box-shadow: 0 0 0 100px var(--autofill-bg-color) inset !important;
-  }
+input {
+  transition:
+    color calc(infinity * 1s) step-end,
+    background-color calc(infinity * 1s) step-end;
 }
 
 @theme inline {
