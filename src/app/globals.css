@@ -112,11 +112,30 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
+@custom-variant chrome {
+  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    @slot;
+  }
+}
+@custom-variant firefox {
+  @supports (-moz-appearance:none) {
+    @slot;
+  }
+}
+@custom-variant safari {
+  _::-webkit-full-page-media, _:future, :root & {
+    @slot;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground max-sm:bg-pink-100 sm:bg-radial from-white from-10% to-rose-200 to-100%;
+    @variant dark {
+      @apply max-sm:bg-pink-950 sm:bg-radial from-rose-900/70 to-black to-150%;
+    }
   }
 }

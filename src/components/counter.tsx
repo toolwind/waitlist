@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import * as motion from "motion/react-client";
+import { cn } from "@/lib/utils";
 
 export function Counter() {
   const [count, setCount] = useState<number | null>(null);
@@ -56,10 +57,10 @@ export function Counter() {
       initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 2, type: "spring" }}
-      className="text-sm text-muted-foreground"
+      className={cn("text-sm text-foreground", count < 25 && "_invisible")}
       aria-live="polite"
     >
-      Join <span className="font-bold">{count.toLocaleString()}</span>+ others
+      Join <span className="font-bold">{count.toLocaleString()}</span> others
       who signed up
     </motion.p>
   );
