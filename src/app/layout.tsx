@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Toolwind ∴ Coming soon",
   description: "The definitive registry of Tailwind CSS tools — crafted, curated, and trusted by developers who care about the details.",
   icons: {
-    icon: '/logo-favicon.png',
+    icon: '/logo-favicon_flat.png',
   },
 };
 
