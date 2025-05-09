@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zeitlist",
-  description: "A simple Next.js Waitlist application with email validation.",
+  title: "Toolwind ∴ Coming soon",
+  description: "The definitive registry of Tailwind CSS tools — crafted, curated, and trusted by developers who care about the details.",
+  icons: {
+    icon: '/logo-favicon.png',
+  },
 };
 
 export default function RootLayout({
