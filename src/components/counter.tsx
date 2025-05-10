@@ -57,7 +57,7 @@ export function Counter() {
       initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 2, type: "spring" }}
-      className={cn("text-sm text-foreground", count < 25 && "_invisible")}
+      className={cn("text-sm text-foreground", count < 25 && "invisible")}
       aria-live="polite"
     >
       Join <span className="font-bold">{count.toLocaleString()}</span> others
