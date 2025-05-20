@@ -42,10 +42,10 @@ export default function Home() {
         className="mb-2"
       >
         <footer className="flex items-center text-3xl mt-2 *:transition-colors *:ease-out *:p-3 *:duration-300 dark:*:text-rose-400/50 dark:*:hover:text-rose-50 *:text-rose-900/50 *:hover:text-black">
-          <Link href="https://x.com/toolwind" target="_blank">
+          <Link href="https://github.com/toolwind" target="_blank">
             <FaGithub />
           </Link>
-          <Link href="https://github.com/toolwind" target="_blank">
+          <Link href="https://x.com/toolwind" target="_blank">
             <FaXTwitter />
           </Link>
         </footer>
