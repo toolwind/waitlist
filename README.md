@@ -1,74 +1,73 @@
-# Zeitlist
+# Toolwind
 
-this is a waitlist app. it uses redis. and arcjet to validate emails.
+A curated registry of Tailwind CSS tools — crafted, collected, and trusted by developers who care about the details.
 
-![](zeitlist.gif)
+Toolwind is your home for the growing ecosystem of Tailwind CSS plugins, utilities, and enhancements. From handcrafted plugins that unlock new styling patterns to powerful community-built tools that extend what’s possible with Tailwind, this site is designed to make discovery, integration, and collaboration easier than ever.
 
-## Core Functionality
+---
 
-- Provides a simple form for users to submit their email.
-- Validates submitted emails using Arcjet before processing.
-- Stores valid emails in a Redis list managed by Upstash.
-- Displays a live count of total signups.
+## ✨ What You'll Find
 
-## Tech Used
+Toolwind includes:
 
-- **Framework:** Next.js
-- **Database:** Upstash (Redis)
-- **Email Validation:** Arcjet
-- **Styling:** Tailwind CSS
-- **Language:** TypeScript
+- **Popular Plugins**: A collection of some of the most widely used and thoughtfully designed Tailwind extensions in the ecosystem.
+- **Developer Utilities**: Tools that improve ergonomics, add expressive styling capabilities, or bring new logic into your stylesheets.
+- **Unified Registry**: Browse, search, and explore Tailwind tooling in one place, with consistent documentation and usage examples.
+- **Zero-config Upgrades**: Keep your Tailwind setup up-to-date and frictionless with our optional integration tooling.
 
-## Local Setup
+---
 
-To get this running on your machine:
+## 🚀 Getting Started
 
-1.  **Clone it:**
+You don’t need to install anything to use Toolwind — just browse the site and copy what you need.
 
-    ```bash
-    git clone ``https://github.com/zeitgg/zeitlist.git`
-    cd zeitlist
-    ```
+But if you want to get the most out of it:
 
-2.  **Install dependencies:**
+```bash
+npm install toolwind
+```
 
-    ```bash
-    bun i
-    ```
+Then check out our plugins:
 
-3.  **Set up environment variables:**
-    You'll need API keys/URLs. Create a `.env.local` file in the root directory and dd these variables:
+```js
+// tailwind.config.js
+const { plugins } = require('toolwind')
 
-    ```plaintext
-    # Get from your Upstash dashboard
-    UPSTASH_REDIS_REST_URL="YOUR_UPSTASH_REDIS_URL"
-    UPSTASH_REDIS_REST_TOKEN="YOUR_UPSTASH_REDIS_TOKEN"
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  plugins: plugins(),
+}
+```
 
-    # Get from your Arcjet dashboard
-    ARCJET_SITE_KEY="YOUR_ARCJET_SITE_KEY"
-    ```
+---
 
-4.  **Run the dev server:**
+## 🛠️ Roadmap
 
-    ```bash
-    bun dev
-    ```
+- [x] Public plugin registry
+- [x] First-party plugin showcase
+- [ ] Tailwind playground integration
+- [ ] Configless install button
+- [ ] GitHub Action for publishing plugins
+- [ ] Plugin detail pages with examples and usage
 
-5.  **Open in browser:** `http://localhost:3000`
+---
 
-## How it Works (Quick Overview)
+## ❤️ Built by Toolwind
 
-1.  User submits their email via the frontend.
-2.  The submission hits an API route (e.g., `/api/waitlist/`).
-3.  This API route first passes the email to Arcjet for validation.
-4.  If Arcjet approves, the email is added to a list in Redis using the Upstash SDK.
-5.  A separate API route (e.g., `/api/waitlist/count`) reads the length of the Redis list to get the current signup count.
-6.  The frontend fetches from the count endpoint and displays the number.
+We’re obsessed with Tailwind CSS — and we’re here to make it even better.
 
-## Contributing
+Toolwind is built by developers who live in the ecosystem, for developers who want more out of it. Whether you're exploring new ideas or just looking for something that *should’ve shipped with Tailwind*, we’ve got you.
 
-Issues and PRs welcome.
+---
+
+## 📫 Stay in the Loop
+
+- 🧵 Follow [@ToolwindCSS](https://twitter.com/toolwindcss) on X  
+- 🌐 Visit [toolwind.dev](https://toolwind.dev)  
+- 📬 Join the waitlist: [toolwind.dev/#newsletter](https://toolwind.dev/#newsletter)
+
+---
 
 ## License
 
-[MIT License](LICENSE)
+MIT
